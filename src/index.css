@@ -39,6 +39,11 @@ img {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.char {
+  position: relative;
+  will-change: transform;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
