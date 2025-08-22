@@ -17,13 +17,12 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Hero = () => {
   const mainRef = useRef();
-  //   const tl = useRef();
 
   useGSAP(() => {
     ScrollTrigger.create({
       start: 1,
       end: "max",
-      scrub: 5,
+      scrub: 1,
       onLeave: (self) => self.scroll(2),
       onLeaveBack: (self) => self.scroll(ScrollTrigger.maxScroll(window) - 2),
     }).scroll(2);
