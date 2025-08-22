@@ -1,58 +1,56 @@
 @font-face {
   font-family: "Helvetica";
-  src: url("/public/fonts/helvetica/helvetica.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Oblique";
-  src: url("/public/fonts/helvetica/helvetica-oblique.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-oblique.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Compressed";
-  src: url("/public/fonts/helvetica/helvetica-compressed.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-compressed.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Rounded Bold";
-  src: url("/public/fonts/helvetica/helvetica-rounded-bold.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-rounded-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("/public/fonts/helvetica/helvetica-bold.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Bold Oblique";
-  src: url("/public/fonts/helvetica/helvetica-bold-oblique.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-bold-oblique.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Light";
-  src: url("/public/fonts/helvetica/helvetica-light.woff") format("woff");
+  src: url("/fonts/helvetica/helvetica-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gwathlyn";
-  src: url("/public/fonts/gwathlyn/gwathlyndemo-regular-webfont.woff2")
-      format("woff2"),
-    url("/public/fonts/gwathlyn/gwathlyndemo-regular-webfont.woff")
-      format("woff");
+  src: url("/fonts/gwathlyn/gwathlyndemo-regular-webfont.woff2") format("woff2"),
+    url("/fonts/gwathlyn/gwathlyndemo-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
