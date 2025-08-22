@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import SmoothScroll from "./utils/smoothScroll";
+import SmoothScroll from "./utils/SmoothScroll";
 
 function App() {
   return (
