@@ -35,3 +35,65 @@ export const desktopAnim = (tl) => {
     )
     .to(".subtitle", { opacity: 1, duration: 0.75 }, "<+1");
 };
+
+export const tabAnim = (tl) => {
+  tl.current = gsap
+    .timeline()
+    .from(".mobile-image-container", {
+      y: "-100%",
+      duration: 3.5,
+      delay: 1,
+    })
+    .from(
+      ".mobile-image-container .image-card",
+      {
+        y: "-70%",
+        duration: 0.75,
+        stagger: { each: 0.2, from: "end" },
+      },
+      "<"
+    )
+    .to(
+      ".char",
+      {
+        y: 0,
+        duration: 0.75,
+        stagger: { each: 0.03, from: "start" },
+      },
+      "<+1"
+    )
+    .to(".subtitle", { opacity: 1, duration: 0.75 }, "<+1");
+};
+
+export const mobileAnim = (tl) => {
+  tl.current = gsap
+    .timeline()
+    .to(".char", {
+      y: 0,
+      duration: 0.75,
+      stagger: { each: 0.03, from: "start" },
+    })
+    .to(
+      ".char",
+      {
+        opacity: 0,
+        duration: 0.75,
+      },
+      "+=2"
+    )
+    .to(".subtitle", { opacity: 1, duration: 0.75 })
+    .to(".subtitle", { opacity: 0, duration: 0.75 }, "+=3")
+    .from(".mobile-image-container", {
+      y: "-100%",
+      duration: 3.5,
+    })
+    .from(
+      ".mobile-image-container .image-card",
+      {
+        y: "-100%",
+        duration: 0.75,
+        stagger: { each: 0.2, from: "end" },
+      },
+      "<"
+    );
+};
