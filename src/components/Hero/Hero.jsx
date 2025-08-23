@@ -33,7 +33,7 @@ const Hero = () => {
       char.classList.add("char");
     });
 
-    const imagesArray = gsap.utils.toArray(".image-container img");
+    const imagesArray = gsap.utils.toArray("img");
 
     gsap.set(".char", { y: "100%" });
     gsap.set(".subtitle", { opacity: 0 });
@@ -61,7 +61,7 @@ const Hero = () => {
           scrub: true,
         },
       })
-      .to(imagesArray, { y: "-15%", duration: 2.5 });
+      .to(imagesArray, { y: "-15%", duration: 1 });
   }, [{ scope: mainRef.current }]);
 
   return (
