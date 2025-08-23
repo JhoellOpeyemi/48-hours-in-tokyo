@@ -15,6 +15,8 @@ import { images1, images2, mobileImages } from "../../data/images";
 import "./hero.css";
 import { desktopAnim, mobileAnim, tabAnim } from "./animations";
 
+gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
+
 const Hero = () => {
   const mainRef = useRef();
   const tl = useRef();
@@ -23,10 +25,6 @@ const Hero = () => {
   const parallaxTl = useRef();
 
   useGSAP(() => {
-    window.scrollTo(0, 0);
-
-    gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
-
     const title = document.querySelector(".title");
     const newTitle = new SplitText(title, { type: "chars" });
     newTitle.chars.forEach((char) => {
