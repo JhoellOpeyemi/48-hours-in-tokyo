@@ -20,22 +20,23 @@ const Hero = () => {
   const tl = useRef();
   const tabTl = useRef();
   const mobileTl = useRef();
+  const parallaxTl = useRef();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
 
-    const mm = gsap.matchMedia();
-
     const title = document.querySelector(".title");
-
     const newTitle = new SplitText(title, { type: "chars" });
-
     newTitle.chars.forEach((char) => {
       char.classList.add("char");
     });
 
+    const imagesArray = gsap.utils.toArray(".image-container img");
+
     gsap.set(".char", { y: "100%" });
     gsap.set(".subtitle", { opacity: 0 });
+
+    const mm = gsap.matchMedia();
 
     mm.add("(min-width: 901px)", () => {
       desktopAnim(tl);
@@ -49,13 +50,16 @@ const Hero = () => {
       mobileAnim(mobileTl);
     });
 
-    ScrollTrigger.create({
-      start: 1,
-      end: "max",
-      scrub: 1,
-      onLeave: (self) => self.scroll(2),
-      onLeaveBack: (self) => self.scroll(ScrollTrigger.maxScroll(window) - 2),
-    }).scroll(2);
+    parallaxTl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".infinite-scroll",
+          start: "clamp(top top)",
+          end: "max",
+          scrub: true,
+        },
+      })
+      .to(imagesArray, { y: "-15%", duration: 2.5 });
   }, [{ scope: mainRef.current }]);
 
   return (

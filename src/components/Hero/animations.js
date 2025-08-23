@@ -38,7 +38,9 @@ export const desktopAnim = (tl) => {
 
 export const tabAnim = (tl) => {
   tl.current = gsap
-    .timeline()
+    .timeline({
+      defaults: { ease: "power4.out" },
+    })
     .from(".mobile-image-container", {
       y: "-100%",
       duration: 3.5,
@@ -67,7 +69,9 @@ export const tabAnim = (tl) => {
 
 export const mobileAnim = (tl) => {
   tl.current = gsap
-    .timeline()
+    .timeline({
+      defaults: { ease: "power4.out" },
+    })
     .to(".char", {
       y: 0,
       duration: 0.75,
