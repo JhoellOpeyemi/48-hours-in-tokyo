@@ -45,7 +45,11 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
 }
 
 @media screen and (max-width: 900px) {

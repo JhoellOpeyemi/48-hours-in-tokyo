@@ -1,13 +1,8 @@
-.main-content {
-  display: flex;
-}
-
 .main-heading {
   position: fixed;
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
-  /* height: 100vh; */
   inset: 0;
   padding: 1.5rem 0;
   display: flex;
@@ -95,15 +90,19 @@
 
 @media screen and (max-width: 550px) {
   .main-heading {
-    position: absolute;
+    position: relative;
     height: fit-content;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 2.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .title {
+    line-height: 1;
   }
 
   .subtitle {
@@ -111,6 +110,7 @@
   }
 
   .mobile-image-container {
+    position: relative;
     width: 100%;
   }
 }

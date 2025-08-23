@@ -23,6 +23,8 @@ const Hero = () => {
   const parallaxTl = useRef();
 
   useGSAP(() => {
+    window.scrollTo(0, 0);
+
     gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
 
     const title = document.querySelector(".title");
